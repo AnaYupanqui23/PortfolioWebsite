@@ -1,30 +1,32 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const runDukeimages = [
-  { type: 'image', src: '/run-duke-img/run-duke1.png' },
-  { type: 'image', src: '/run-duke-img/run-duke2.png' },
-  { type: 'image', src: '/run-duke-img/run-duke3.png' },
-  { type: 'image', src: '/run-duke-img/run-duke4.png' },
+  { type: 'image', src: `${base}run-duke-img/run-duke1.png` },
+  { type: 'image', src: `${base}run-duke-img/run-duke2.png` },
+  { type: 'image', src: `${base}run-duke-img/run-duke3.png` },
+  { type: 'image', src: `${base}run-duke-img/run-duke4.png` },
 ]
 const greenGotchiMedia = [
-  { type: 'image', src: '/greengotchi/greengotchi-app-layout.png' },
-  { type: 'video', src: '/greengotchi/greengotchi-app-demo.webm' },
+  { type: 'image', src: `${base}greengotchi/greengotchi-app-layout.png` },
+  { type: 'video', src: `${base}greengotchi/greengotchi-app-demo.webm` },
 ]
 
 const rnsMedia = [
-  { type: 'image', src: '/roots-and-shoots/Home.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/AboutUs.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/Projects.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/Projects-Australia.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/Projects-SouthAmerica.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/Project-AmazonRainforest.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/LeaderboardPage.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/LeaderboardPageExtended.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/Donation.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/DonationThanks.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/ContactUs.png', portrait: true },
-  { type: 'image', src: '/roots-and-shoots/SignUp.png', portrait: true }
+  { type: 'image', src: `${base}roots-and-shoots/Home.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/AboutUs.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/Projects.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/Projects-Australia.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/Projects-SouthAmerica.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/Project-AmazonRainforest.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/LeaderboardPage.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/LeaderboardPageExtended.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/Donation.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/DonationThanks.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/ContactUs.png`, portrait: true },
+  { type: 'image', src: `${base}roots-and-shoots/SignUp.png`, portrait: true }
 ]
 
 function Carousel({media}) {
@@ -81,7 +83,7 @@ function App() {
   return (
     <>
       <nav>
-        <img src="/favicon-long1.png" alt="Ana Paula" className="nav-logo" />
+        <img src={`${base}favicon-long1.png`} alt="Ana Paula" className="nav-logo" />
         <div className="nav-links">
           <a href="#about">about</a>
           <a href="#projects">projects</a>
@@ -161,15 +163,20 @@ function App() {
             target="_blank" 
             rel="noopener noreferrer"
           > 
-            <img style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} src="/UNSW-logo.png" alt="UNSW logo" />
+            <img 
+              style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
+              src={`${base}UNSW-logo.png`} 
+              alt="UNSW logo" 
+            />
           </a>
           <a
             href="https://calendar.adelaide.edu.au/aprcw/2023/behep_behengpath" 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            <img style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
-              src="/UoA-logo.png" 
+            <img 
+              style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
+              src={`${base}UoA-logo.png`}
               alt="The University of Adelaide logo"             
             />
           </a>
@@ -178,7 +185,11 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} src="/shc-logo.webp" alt="Sacred Heart College logo" />
+            <img 
+              style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
+              src={`${base}shc-logo.webp`}
+              alt="Sacred Heart College logo" 
+            />
           </a>
         </div>
 
@@ -212,7 +223,7 @@ function App() {
               <Carousel media={runDukeimages}/>
             </div>
             <div className="proj-right">
-              <a className="doc-link" href="/comp3421report.pdf" target="_blank" rel="noopener noreferrer">📄 Design doc</a>
+              <a className="doc-link" href={`${base}comp3421report.pdf`} target="_blank" rel="noopener noreferrer">📄 Design doc</a>
               <a className="doc-link" href="https://polabear23.itch.io/run-duke" target="_blank" rel="noopener noreferrer">▶ itch.io</a>
             </div>
           </div>
@@ -259,8 +270,8 @@ function App() {
               <span className="ptag">Design</span>
             </div>
             <div style={{margin: '2rem 0'}}>
-              <img style={{width:'100%',height:'auto', maxWidth: '140px'}} src="/favicon.png" alt="Ana Paula" className="nav-logo" />
-              <img style={{width:'100%',height:'auto' , maxWidth: '400px'}} src="/favicon-long1.png" alt="Ana Paula" className="nav-logo" />
+              <img style={{width:'100%',height:'auto', maxWidth: '140px'}} src={`${base}favicon.png`} alt="Ana Paula logo initials" className="nav-logo" />
+              <img style={{width:'100%',height:'auto' , maxWidth: '400px'}} src={`${base}favicon-long1.png`} alt="Ana Yupanqui logo" className="nav-logo" />
             </div>
           </div>
 
@@ -321,9 +332,9 @@ function App() {
                 <span className="ptag">Figma</span>
               </div>
               <div className="media-pair">
-                <img src="/greengotchi/greengotchi-app-layout.png" alt="GreenGotchi app layout" className="media-pair-img layout" />
+                <img src={`${base}greengotchi/greengotchi-app-layout.png`} alt="GreenGotchi app layout" className="media-pair-img layout" />
                 <video className="media-pair-img demo" controls muted loop>
-                  <source src="/greengotchi/greengotchi-app-demo.webm" type="video/webm" />
+                  <source src={`${base}greengotchi/greengotchi-app-demo.webm`} type="video/webm" />
                 </video>
               </div>
             </div>
