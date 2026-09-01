@@ -19,9 +19,11 @@ nav {
   top: 0;
   z-index: 10;
 }
+
 .nav-logo {
-  height: 60px;
+  height: 40px;
   width: auto;
+  max-width: 150px;
 }
 
 .nav-name {
@@ -161,7 +163,7 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
@@ -173,13 +175,13 @@ section {
 }
 
 .proj-card.featured {
-  border-color: #a07840;
-  background: #fdf8f0;
-  grid-column: 1 / -1;
+  grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
   align-items: start;
+  border-color: #a07840;
+  background: #fdf8f0;
 }
 
 .featured-badge {
@@ -428,6 +430,7 @@ section {
   width: 25%;
   border-radius: 8px;
   object-fit: cover;
+  max-height: 300px;
 }
 
 .dot {
@@ -465,6 +468,64 @@ section {
 }
 
 @media (max-width: 768px) {
+  .nav-logo {
+    height: 30px;
+    max-width: 120px;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .hero-name {
+    font-size: 36px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .proj-card.featured{
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+
+  .proj-right{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .skills-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .media-pair{
+    flex-direction: column;
+  }
+
+  .media-pair-img.layout, 
+  .media-pair-img.demo {
+    max-height: 250px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  section {
+    padding: 2rem 1.5rem;
+  }
+  .hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+  .contact-block .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .about-grid {
     flex-direction: column;
     gap: 1.5rem;
@@ -472,6 +533,26 @@ section {
 
   .about-left {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 24px;
+    max-width: 100px;
+  }
+
+  .hero-name {
+    font-size: 28px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 

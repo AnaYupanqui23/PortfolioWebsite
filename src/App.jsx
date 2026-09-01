@@ -254,7 +254,7 @@ function App() {
               <p style={{fontSize: '12px', color: '#a07840', marginTop: '0.75rem', fontStyle: 'italic', textAlign: 'right'}}>
                 Interested in the written thesis pages, check out this PDF ↓
               </p>
-              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href="/ThesisReport.pdf" target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
+              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href="${base}ThesisReport.pdf" target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
             </div>
           </div>
           
@@ -390,9 +390,10 @@ function App() {
           <h2 className="contact-heading">Let's work together.</h2>
           <p>Open to internships in frontend, game development, or health tech.<br />Adelaide-based, open to remote.</p>
           <div className='buttons'>
-            <a className="contact-btn" href="mailto:anayupanquiponcedeleon@gmail.com">Get in touch</a>
+            <a className="contact-btn" href="mailto:ana.yupanquipdl@gmail.com">Get in touch</a>
             <a className="contact-btn secondary" href="https://www.linkedin.com/in/ana-yupanqui-ponce-de-leon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a className="contact-btn secondary" href="https://github.com/AnaYupanqui23" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a className="contact-btn" href={`${base}resume.pdf`} target="_blank" rel="noopener noreferrer">📄 Resume PDF</a>
           </div>
         </div>
       </section>
