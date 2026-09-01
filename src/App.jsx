@@ -254,7 +254,7 @@ function App() {
               <p style={{fontSize: '12px', color: '#a07840', marginTop: '0.75rem', fontStyle: 'italic', textAlign: 'right'}}>
                 Interested in the written thesis pages, check out this PDF ↓
               </p>
-              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href="${base}ThesisReport.pdf" target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
+              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href={`${base}ThesisReport.pdf`}  target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
             </div>
           </div>
           
