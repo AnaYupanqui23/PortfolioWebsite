@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import Hero from './components/Hero';
 
 const base = import.meta.env.BASE_URL
 
@@ -83,7 +84,7 @@ function App() {
   return (
     <>
       <nav>
-        <img src={`${base}favicon-long1.png`} alt="Ana Paula" className="nav-logo" />
+        <img src={`${base}website-logos/favicon-long1.png`} alt="Ana Paula" className="nav-logo" />
         <div className="nav-links">
           <a href="#about">about</a>
           <a href="#projects">projects</a>
@@ -91,30 +92,7 @@ function App() {
           <a href="#contact">contact</a>
         </div>
       </nav>
-
-      <section className="hero">
-        <div className="hero-glow"></div>
-        <p className="eyebrow">Software Engineer & Game Developer</p>
-        <h1 className="hero-name">
-          Hi, I'm <em>Ana Paula.</em><br />
-          I build things that <br />
-          feel as good as they look.
-        </h1>
-        <p className="hero-tagline">
-          I like to build things that feel good to use - with a particular love for{' '}
-          <strong>frontend design</strong> and <strong>game development</strong>{' '}- from stealth survival games to polished web experiences. <br />
-          Currently finishing my <strong>Bachelor of Software Engineering</strong> at {' '}
-          <strong>UNSW</strong>. Based in Adelaide, open to remote and relocation.
-
-        </p>
-        <div className="hero-tags">
-          <span className="tag gold">Unreal Engine 5</span>
-          <span className="tag">React</span>
-          <span className="tag">Game Design</span>
-          <span className="tag">Frontend</span>
-          <span className="tag">Health Tech</span>
-        </div>
-      </section>
+      <Hero />
 
       <section id="about">
     <p className="section-label">About</p>
@@ -165,7 +143,7 @@ function App() {
           > 
             <img 
               style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
-              src={`${base}UNSW-logo.png`} 
+              src={`${base}schooling-logos/UNSW-logo.png`} 
               alt="UNSW logo" 
             />
           </a>
@@ -176,7 +154,7 @@ function App() {
           >
             <img 
               style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
-              src={`${base}UoA-logo.png`}
+              src={`${base}schooling-logos/UoA-logo.png`}
               alt="The University of Adelaide logo"             
             />
           </a>
@@ -187,7 +165,7 @@ function App() {
           >
             <img 
               style={{width:'100%',height:'auto', maxWidth: '90px', margin:'0.5rem'}} 
-              src={`${base}shc-logo.webp`}
+              src={`${base}schooling-logos/shc-logo.webp`}
               alt="Sacred Heart College logo" 
             />
           </a>
@@ -223,7 +201,7 @@ function App() {
               <Carousel media={runDukeimages}/>
             </div>
             <div className="proj-right">
-              <a className="doc-link" href={`${base}comp3421report.pdf`} target="_blank" rel="noopener noreferrer">📄 Design doc</a>
+              <a className="doc-link" href={`${base}reports/comp3421report.pdf`} target="_blank" rel="noopener noreferrer">📄 Design doc</a>
               <a className="doc-link" href="https://polabear23.itch.io/run-duke" target="_blank" rel="noopener noreferrer">▶ itch.io</a>
             </div>
           </div>
@@ -254,7 +232,7 @@ function App() {
               <p style={{fontSize: '12px', color: '#a07840', marginTop: '0.75rem', fontStyle: 'italic', textAlign: 'right'}}>
                 Interested in the written thesis pages, check out this PDF ↓
               </p>
-              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href={`${base}ThesisReport.pdf`}  target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
+              <a className="doc-link" style={{marginTop: '1rem', display: 'inline-flex'}} href={`${base}reports/ThesisReport.pdf`}  target="_blank" rel="noopener noreferrer">📄 Thesis doc</a>
             </div>
           </div>
           
@@ -270,8 +248,8 @@ function App() {
               <span className="ptag">Design</span>
             </div>
             <div style={{margin: '2rem 0'}}>
-              <img style={{width:'100%',height:'auto', maxWidth: '140px'}} src={`${base}favicon.png`} alt="Ana Paula logo initials" className="nav-logo" />
-              <img style={{width:'100%',height:'auto' , maxWidth: '400px'}} src={`${base}favicon-long1.png`} alt="Ana Yupanqui logo" className="nav-logo" />
+              <img style={{width:'100%',height:'auto', maxWidth: '140px'}} src={`${base}website-logos/favicon.png`} alt="Ana Paula logo initials" className="nav-logo" />
+              <img style={{width:'100%',height:'auto' , maxWidth: '400px'}} src={`${base}website-logos/favicon-long1.png`} alt="Ana Yupanqui logo" className="nav-logo" />
             </div>
           </div>
 
@@ -393,7 +371,7 @@ function App() {
             <a className="contact-btn" href="mailto:ana.yupanquipdl@gmail.com">Get in touch</a>
             <a className="contact-btn secondary" href="https://www.linkedin.com/in/ana-yupanqui-ponce-de-leon/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a className="contact-btn secondary" href="https://github.com/AnaYupanqui23" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a className="contact-btn" href={`${base}Resume.pdf`} target="_blank" rel="noopener noreferrer">📄 Resume PDF</a>
+            <a className="contact-btn" href={`${base}reports/Resume.pdf`} target="_blank" rel="noopener noreferrer">📄 Resume PDF</a>
           </div>
         </div>
       </section>

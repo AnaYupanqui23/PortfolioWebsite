@@ -119,7 +119,113 @@ nav {
 
 section {
   padding: 2.5rem 2.5rem;
-  border-top: 0.5px solid #e0d4c0;
+  border-top: 0.5px solid rgb(224, 212, 192);
+}
+
+/* TWO COLUMN HERO LAYOUT */
+.hero-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-right {
+  flex: 2;
+  min-width: 0;
+  position: relative;
+  height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* HANDWRITTEN STATIC TEXT */
+.hero-currently {
+  font-family: 'Press Start 2P';
+  font-size: 1rem;
+  color: #99568d;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+.currently-line1 {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.currently-line2 {
+  font-size: 1.25rem;
+  margin-left: 0.8rem; /* offsets it to the right */
+  color: #99568d;
+}
+/* FRIDGE BOARD */
+.fridge-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ALL MAGNETS */
+.magnet {
+  position: absolute;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* IMAGE MAGNETS */
+.image-magnet {
+  width: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 
+    20px -15px 30px rgba(68, 40, 24, 0.15),
+    -20px 15px 30px rgba(68, 40, 24, 0.15);
+}
+
+.image-magnet img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* SKILL BUBBLES */
+.bubble-magnet {
+  background: #F7F2EA;
+  border: 1.5px solid #99568d;
+  color: #99568d;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  box-shadow: 0 5px 8px rgba(26, 21, 17, 0.15);
+  white-space: nowrap;
+}
+
+/* MOBILE - stack columns */
+@media (max-width: 768px) {
+  .hero-columns {
+    flex-direction: column;
+  }
+  .hero-right {
+    width: 100%;
+    height: 400px;
+  }
 }
 
 .section-label {
