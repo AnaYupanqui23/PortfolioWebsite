@@ -623,12 +623,12 @@ section {
 }
 
 .about-left {
-  flex:2;
+  flex:3;
   max-width: 520px;
 }
 
 .education {
-  flex:1;
+  flex:2;
   min-width: 250px;
 }
 
@@ -639,6 +639,31 @@ section {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.edu-item {
+  border-left: 2px solid #a07840;
+  padding-left: 1rem;
+}
+
+.edu-degree {
+  font-size: 14px;
+  font-weight: 500;
+  color: #40372a;
+}
+
+.edu-school {
+  font-size: 14px;
+  color: #9a8a76;
+  font-weight: 400;
+  margin-top: 2px;
 }
 
 .school-logo{
@@ -740,29 +765,4 @@ section {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.edu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.edu-item {
-  border-left: 2px solid #a07840;
-  padding-left: 1rem;
-}
-
-.edu-degree {
-  font-size: 14px;
-  font-weight: 500;
-  color: #40372a;
-}
-
-.edu-school {
-  font-size: 14px;
-  color: #9a8a76;
-  font-weight: 400;
-  margin-top: 2px;
 }
