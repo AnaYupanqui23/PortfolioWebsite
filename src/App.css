@@ -5,25 +5,25 @@
 body {
   font-family: 'DM Sans', sans-serif;
   background: #F7F2EA;
-  color: #3a3028;
+  color: #1f170f;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   border-bottom: 0.5px solid #e0d4c0;
-  background: #F7F2EA;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .nav-logo {
-  height: 40px;
+  height: 45px;
   width: auto;
-  max-width: 150px;
 }
 
 .nav-name {
@@ -41,7 +41,7 @@ nav {
 
 .nav-links a {
   font-size: 12px;
-  color: #9a8a76;
+  color: #3d2f19;
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -49,6 +49,16 @@ nav {
 }
 
 .nav-links a:hover { color: #a07840; }
+
+.global-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.25;
+}
 
 .hero {
   padding: 4rem 2.5rem 3rem;
@@ -69,10 +79,10 @@ nav {
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 11.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #a07840;
+  color: #3d2f19;
   font-weight: 400;
   margin-bottom: 1.2rem;
 }
@@ -82,40 +92,68 @@ nav {
   font-size: 54px;
   font-weight: 400;
   line-height: 1.08;
-  color: #2a2018;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .hero-name em {
   font-style: italic;
-  color: #a07840;
+  color: #b1741f;
+  font-weight: 500;
 }
 
 .hero-tagline {
   font-size: 14px;
-  color: #7a6a58;
+  color: #1f170f;
   line-height: 1.8;
-  max-width: 460px;
+  max-width: 400px;
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
-.hero-tagline strong { color: #5a4a38; font-weight: 400; }
+.hero-tagline strong { color: #000000; font-weight: 500; }
 
-.hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.hero-tags { 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap; 
+}
+
+/* ================================
+   UNIVERSAL TAG SYSTEM
+================================ */
 
 .tag {
-  background: #ede4d4;
-  color: #8a7860;
+  color: #78592e;
   font-size: 11px;
   padding: 5px 14px;
   border-radius: 20px;
   font-weight: 400;
-  border: 0.5px solid #d8ccb8;
+  border: 0.5px solid #ab9c81;
   letter-spacing: 0.03em;
+  background: radial-gradient(#fef8e8, #ffe3fa);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.tag.gold { background: #f5edd8; border-color: #a07840; color: #a07840; }
+.tag.gold { 
+  border-color: #78592e; 
+  background: radial-gradient(#fef8e8, #fff2df);
+}
+
+/* SIZE VARIANTS */
+.tag--sm {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.tag--md {
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 20px; 
+}
+
 
 section {
   padding: 2.5rem 2.5rem;
@@ -162,6 +200,15 @@ section {
   align-items: flex-start;
   transform: translate(-50%, -50%) rotate(-5deg);
 }
+
+.currently-line1, .currently-line2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  animation: typeReveal 4s ease forwards;
+}
+
 .currently-line1 {
   font-size: 1rem;
   opacity: 0.8;
@@ -171,7 +218,19 @@ section {
   font-size: 1.25rem;
   margin-left: 0.8rem; /* offsets it to the right */
   color: #99568d;
+  animation-delay: 0.8s;
 }
+@keyframes typeReveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
 /* FRIDGE BOARD */
 .fridge-board {
   position: relative;
@@ -184,6 +243,8 @@ section {
   position: absolute;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* IMAGE MAGNETS */
@@ -206,7 +267,7 @@ section {
 
 /* SKILL BUBBLES */
 .bubble-magnet {
-  background: #F7F2EA;
+  background: #f7f2ea61;
   border: 1.5px solid #99568d;
   color: #99568d;
   font-family: 'DM Sans', sans-serif;
@@ -229,7 +290,7 @@ section {
 }
 
 .section-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #a07840;
@@ -250,7 +311,7 @@ section {
 .about-text {
   font-size: 14px;
   line-height: 1.9;
-  color: #6a5a48;
+  color: #1f170f;
   font-weight: 300;
   max-width: 520px;
 }
@@ -261,10 +322,10 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 19px;
   font-style: italic;
-  color: #a07840;
+  color: #794b0a;
   margin-top: 1.5rem;
   line-height: 1.5;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .projects-grid {
@@ -274,10 +335,22 @@ section {
 }
 
 .proj-card {
-  background: #fff;
+  background: #ffffff9b;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 0.5px solid #e0d4c0;
   border-radius: 12px;
   padding: 1.25rem;
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.proj-card:hover {
+  
+  box-shadow: 
+    0 12px 32px rgba(58, 48, 40, 0.12),
+    0 4px 12px rgba(58, 48, 40, 0.08);
 }
 
 .proj-card.featured {
@@ -287,7 +360,7 @@ section {
   gap: 1.5rem;
   align-items: start;
   border-color: #a07840;
-  background: #fdf8f0;
+  background: #fdf8f0a6;
 }
 
 .featured-badge {
@@ -331,17 +404,6 @@ section {
 
 .proj-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
-.ptag {
-  font-size: 10px;
-  background: #f0e8d8;
-  color: #8a7860;
-  padding: 3px 10px;
-  border-radius: 10px;
-  border: 0.5px solid #e0d4c0;
-}
-
-.ptag.gold { background: #f5edd8; color: #a07840; border-color: #d4b880; }
-
 .proj-right {
   display: flex;
   flex-direction: column;
@@ -376,23 +438,25 @@ section {
 }
 
 .skill-group h4 {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #a07840;
   margin-bottom: 0.8rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .skill-list {
   font-size: 13px;
-  color: #7a6a58;
+  color: #1f170f;
   line-height: 2;
   font-weight: 300;
 }
 
 .contact-block {
-  background: #fdf8f0;
+  background: #fdf8f0a6;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 0.5px solid #d8c8a8;
   border-radius: 12px;
   padding: 2rem;
@@ -568,9 +632,25 @@ section {
   min-width: 250px;
 }
 
-.education-logo {
+.education-logos {
   flex:1;
-  min-width: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.school-logo{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.school-logo:hover{
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -675,14 +755,14 @@ section {
 }
 
 .edu-degree {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  color: #3a3028;
+  color: #40372a;
 }
 
 .edu-school {
-  font-size: 12px;
+  font-size: 14px;
   color: #9a8a76;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 2px;
 }

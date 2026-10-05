@@ -1,4 +1,7 @@
 import { useEffect, useRef } from 'react';
+import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react';
+import { useCardHover } from './useCardHover';
+import { useCardTilt } from './useCardTilt';
 
 export default function Hero() {
     const boardRef = useRef(null);
@@ -170,9 +173,13 @@ export default function Hero() {
             clearTimeout(timeout);
         };
         }, []);
+    
+    //useCardHover('.image-magnet');
+    useCardTilt('.image-magnet');
 
     return (
         <section className="hero">
+
         <div className="hero-glow"></div>
 
         <div className="hero-columns">
@@ -180,7 +187,7 @@ export default function Hero() {
             <p className="eyebrow">Software Engineer & Game Developer</p>
             <h1 className="hero-name">
                 Hi, I'm <em>Ana Paula.</em><br />
-                I build things that <br />
+                I build things that 
                 feel as good as they look.
             </h1>
             <p className="hero-tagline">
@@ -191,10 +198,10 @@ export default function Hero() {
             </p>
             <div className="hero-tags">
                 <span className="tag gold">Unreal Engine 5</span>
-                <span className="tag">React</span>
-                <span className="tag">Game Design</span>
-                <span className="tag">Frontend</span>
-                <span className="tag">Health Tech</span>
+                <span className="tag tag--md">React</span>
+                <span className="tag tag--md">Game Design</span>
+                <span className="tag tag--md">Frontend</span>
+                <span className="tag ">Health Tech</span>
             </div>
             </div>
 
