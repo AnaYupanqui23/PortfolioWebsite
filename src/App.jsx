@@ -29,7 +29,7 @@ function App() {
             uDensity={5}
             uFrequency={5.5}
             color1="#cfcadc"
-            color2="#d6b1cf" /**edc8e5 */
+            color2="#d6b1cf" /**neutral pink shade edc8e5 */
             color3="#C4A882"
             wireframe={false}
             shader="defaults"
