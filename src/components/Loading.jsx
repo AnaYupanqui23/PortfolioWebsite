@@ -11,7 +11,7 @@ export default function Loading({ onComplete }) {
     const logoTimer = setTimeout(() => setPhase('logo'), 500);
 
     // Phase 3 — exit fade
-    const exitTimer = setTimeout(() => setPhase('exit'), 1500);
+    const exitTimer = setTimeout(() => setPhase('exit'), 1800);
 
     // Phase 4 — tell App we're done
     const doneTimer = setTimeout(() => onComplete(), 2000);
