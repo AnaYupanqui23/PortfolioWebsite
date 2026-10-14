@@ -206,19 +206,19 @@ section {
   overflow: hidden;
   white-space: nowrap;
   opacity: 0;
-  animation: typeReveal 4s ease forwards;
+  animation: typeReveal 3.2s ease forwards;
+  animation-delay: 2.5s; 
 }
 
 .currently-line1 {
   font-size: 1rem;
-  opacity: 0.8;
 }
 
 .currently-line2 {
   font-size: 1.25rem;
   margin-left: 0.8rem; /* offsets it to the right */
   color: #99568d;
-  animation-delay: 0.8s;
+  animation-delay: 3.0s;
 }
 @keyframes typeReveal {
   from {
@@ -765,4 +765,64 @@ section {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* LOADING SCREEN */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1012;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.loading-exit {
+  opacity: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* GRADIENT FADE IN */
+.loading-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.loading-gradient--visible {
+  opacity: 1;
+}
+
+/* LOGO */
+.loading-logo {
+  position: relative;
+  z-index: 10;
+  width: 280px;
+  max-width: 70vw;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  filter: brightness(1.1);
+}
+
+.loading-logo--visible {
+  opacity: 1;
+}
+
+.app-content--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.app-content {
+  transition: opacity 0.5s ease;
 }
