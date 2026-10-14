@@ -206,66 +206,70 @@ export default function Hero() {
             </div>
 
             <div className="hero-right">
-            <p className="hero-currently" ref={currentlyRef}>
-                <span className="currently-line1">currently exploring:</span>
-                <span className="currently-line2">wearable tech</span>
-            </p>
-            <div className="fridge-board" id="fridge-board" ref={boardRef}>
-                {/* Floating image magnets */}
-                <div className="magnet image-magnet" style={{top: '45%', left: '10%', rotate: '-1deg'}}>
-                <a 
-                    href="https://www.instagram.com/reel/DdZuNBNNSCL/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >     
-                    <img src="public/hero-projects/tech_hairclip1.jpg" alt="tech hairclip" />
-                </a>
-                </div>
-                <div className="magnet image-magnet" style={{top: '15%', left: '65%', rotate: '10deg'}}>
-                <a 
-                    href="https://www.instagram.com/reel/Dd4etFMRgWp/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >   
-                    <img src="public/hero-projects/tech_hairclip2.PNG" alt="tech hairclip 2" />
-                </a>
-                </div>
-                <div className="magnet image-magnet" style={{top: '5%', left: '5%', rotate: '-3deg'}}>
-                <a 
-                    href="https://www.instagram.com/reel/DdA4vfUhF-r/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >   
-                    <img src="public/hero-projects/nft_keychain.PNG" alt="nft keychain" />
-                </a>
-                </div>
-                <div className="magnet image-magnet" style={{top: '50%', left: '65%', rotate: '3deg'}}>
-                <a 
-                    href="https://www.instagram.com/reel/DdFNvpARXFX/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >       
-                    <img src="public/hero-projects/magic_eightball.png" alt="magic eight ball" />
-                </a>
-                </div>
-                <div className="magnet image-magnet" style={{top: '74%', left: '35%', rotate: '-2deg'}}>
-                <a 
-                    href="https://www.instagram.com/reel/DdpEhWhTxHw/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >
-                    <img src="public/hero-projects/skuba_keychain.PNG" alt="skuba keychain" />
-                </a>
-                </div>
+                <p className="hero-currently" ref={currentlyRef}>
+                    <span className="currently-line1">currently exploring:</span>
+                    <span className="currently-line2">wearable tech</span>
+                </p>
+                <div className="fridge-board" id="fridge-board" ref={boardRef}>
+                    {/* Floating image magnets */}
+                    <div className="magnet image-magnet" style={{top: '45%', left: '10%', rotate: '-1deg'}}>
+                    <a 
+                        href="https://www.instagram.com/reel/DdZuNBNNSCL/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >     
+                        <img src="public/hero-projects/tech_hairclip1.jpg" alt="tech hairclip" />
+                    </a>
+                    </div>
+                    <div className="magnet image-magnet" style={{top: '15%', left: '65%', rotate: '10deg'}}>
+                    <a 
+                        href="https://www.instagram.com/reel/Dd4etFMRgWp/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >   
+                        <img src="public/hero-projects/tech_hairclip2.PNG" alt="tech hairclip 2" />
+                    </a>
+                    </div>
+                    <div className="magnet image-magnet" style={{top: '5%', left: '5%', rotate: '-3deg'}}>
+                    <a 
+                        href="https://www.instagram.com/reel/DdA4vfUhF-r/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >   
+                        <img src="public/hero-projects/nft_keychain.PNG" alt="nft keychain" />
+                    </a>
+                    </div>
+                    <div className="magnet image-magnet" style={{top: '50%', left: '65%', rotate: '3deg'}}>
+                    <a 
+                        href="https://www.instagram.com/reel/DdFNvpARXFX/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >       
+                        <img src="public/hero-projects/magic_eightball.png" alt="magic eight ball" />
+                    </a>
+                    </div>
+                    <div className="magnet image-magnet" style={{top: '74%', left: '35%', rotate: '-2deg'}}>
+                    <a 
+                        href="https://www.instagram.com/reel/DdpEhWhTxHw/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <img src="public/hero-projects/skuba_keychain.PNG" alt="skuba keychain" />
+                    </a>
+                    </div>
 
-                {/* Floating skill bubbles */}
-                <div className="magnet bubble-magnet" style={{top: '5%', left: '50%'}}>Fashion Tech</div>
-                <div className="magnet bubble-magnet" style={{top: '67%', left: '25%'}}>Arduino</div>
-                <div className="magnet bubble-magnet" style={{top: '80%', left: '75%'}}>Human-Computer Interaction</div>
-                <div className="magnet bubble-magnet" style={{top: '30%', left: '15%'}}>Embedded Systems</div>
+                    {/* Floating skill bubbles */}
+                    <div className="magnet bubble-magnet" style={{top: '5%', left: '50%'}}>Fashion Tech</div>
+                    <div className="magnet bubble-magnet" style={{top: '67%', left: '25%'}}>Arduino</div>
+                    <div className="magnet bubble-magnet" style={{top: '80%', left: '75%'}}>Human-Computer Interaction</div>
+                    <div className="magnet bubble-magnet" style={{top: '30%', left: '15%'}}>Embedded Systems</div>
+                </div>
+                
             </div>
-            </div>
+            
         </div>
+        <p style={{fontSize: '12px', color: '#a07840', fontStyle: 'italic', textAlign: 'right'}}>*Click on the images to see creator credits. </p>
+        <p style={{fontSize: '12px', color: '#a07840', fontStyle: 'italic', textAlign: 'right'}}>**These images are interactable and rotate. </p>
         </section>
     );
 }

@@ -101,7 +101,7 @@ export default function About() {
                     rel="noopener noreferrer"
                 > 
                     <img className="school-logo"
-                    src={`${base}schooling-logos/BHP_logo.webp`} 
+                    src={`${base}work-logos/BHP-Billiton-Logo.png`} 
                     alt="BHP logo" 
                     />
                 </a>
@@ -111,7 +111,7 @@ export default function About() {
                     rel="noopener noreferrer"
                 >
                     <img className="school-logo"
-                    src={`${base}schooling-logos/clinpath-logo.png`}
+                    src={`${base}work-logos/clinpath-logo.png`}
                     alt="Clinpath Pathology logo"             
                     />
                 </a>
