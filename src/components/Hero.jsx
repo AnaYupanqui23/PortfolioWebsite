@@ -3,6 +3,8 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react';
 import { useCardHover } from './useCardHover';
 import { useCardTilt } from './useCardTilt';
 
+const base = import.meta.env.BASE_URL
+
 export default function Hero() {
     const boardRef = useRef(null);
     const currentlyRef = useRef(null);
@@ -218,7 +220,8 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >     
-                        <img src="public/hero-projects/tech_hairclip1.jpg" alt="tech hairclip" />
+                        <img src={`${base}hero-projects/tech_hairclip1.jpg`} alt="tech hairclip" />
+                        
                     </a>
                     </div>
                     <div className="magnet image-magnet" style={{top: '15%', left: '65%', rotate: '10deg'}}>
@@ -227,7 +230,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >   
-                        <img src="public/hero-projects/tech_hairclip2.PNG" alt="tech hairclip 2" />
+                        <img src={`${base}hero-projects/tech_hairclip2.png`} alt="tech hairclip 2" />
                     </a>
                     </div>
                     <div className="magnet image-magnet" style={{top: '5%', left: '5%', rotate: '-3deg'}}>
@@ -236,7 +239,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >   
-                        <img src="public/hero-projects/nft_keychain.PNG" alt="nft keychain" />
+                        <img src={`${base}hero-projects/nft_keychain.PNG`} alt="nft keychain" />
                     </a>
                     </div>
                     <div className="magnet image-magnet" style={{top: '50%', left: '65%', rotate: '3deg'}}>
@@ -245,7 +248,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >       
-                        <img src="public/hero-projects/magic_eightball.png" alt="magic eight ball" />
+                        <img src={`${base}hero-projects/magic_eightball.png`} alt="magic eight ball" />
                     </a>
                     </div>
                     <div className="magnet image-magnet" style={{top: '74%', left: '35%', rotate: '-2deg'}}>
@@ -254,7 +257,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <img src="public/hero-projects/skuba_keychain.PNG" alt="skuba keychain" />
+                        <img src={`${base}hero-projects/skuba_keychain.png`} alt="skuba keychain" />
                     </a>
                     </div>
 
