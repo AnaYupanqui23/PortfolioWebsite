@@ -230,7 +230,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >   
-                        <img src={`${base}hero-projects/tech_hairclip2.png`} alt="tech hairclip 2" />
+                        <img src={`${base}hero-projects/tech_hairclip2.PNG`} alt="tech hairclip 2" />
                     </a>
                     </div>
                     <div className="magnet image-magnet" style={{top: '5%', left: '5%', rotate: '-3deg'}}>
@@ -257,7 +257,7 @@ export default function Hero() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <img src={`${base}hero-projects/skuba_keychain.png`} alt="skuba keychain" />
+                        <img src={`${base}hero-projects/skuba_keychain.PNG`} alt="skuba keychain" />
                     </a>
                     </div>
 
